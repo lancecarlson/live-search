@@ -4,6 +4,7 @@ module LiveAPI
       API_DOMAIN = "http://api.search.live.net/"
       FORMAT = "json"
       SOURCE = "web"
+      DEFAULT_OFFSET = 0
       DEFAULT_COUNT = 50
       DEFAULT_MARKET = "en-US"
       
@@ -18,6 +19,7 @@ module LiveAPI
         @options[:Format] = FORMAT
         @options[:Sources] = SOURCE
         @options[:Count] = @options[:Count] ||= DEFAULT_COUNT
+        @options[:Offset] = @options[:Offset] ||= DEFAULT_OFFSET
         @options[:Market] = @options[:Market] ||= DEFAULT_MARKET
         
         raise "Application ID is needed" if @options[:AppId].nil?
@@ -27,7 +29,9 @@ module LiveAPI
       # The API URL call
       def path
         @options["Web.Count"] = @options[:Count]
+        @options["Web.Offset"] = @options[:Offset]
         @options.delete(:Count)
+        @options.delete(:Offset)
         "#{API_DOMAIN}/#{@options[:Format]}.aspx?#{query_string}"
       end
       

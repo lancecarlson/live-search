@@ -10,7 +10,7 @@
 
 You can also provide options in the second parameter. Example:
 
-# LiveAPI::Search.web("seo", :count => 25) #=> Returns 25 results instead of our default 50
+# LiveAPI::Search.web("seo", :Count => 25, :Offset => 26) #=> Returns 25 results instead of our default 50 and starts on the 2nd page
 
 See LiveAPI::Search::Request for query options.
 
