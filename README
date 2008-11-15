@@ -1,0 +1,17 @@
+# search = LiveAPI::Search.web("seo")
+# results = search.results #=> 50 results happy results :)
+# 
+# results.each do |result|
+# 	puts result.title
+# 	puts result.description
+# 	puts result.url
+# 	puts result.display_url
+# end
+
+You can also provide options in the second parameter. Example:
+
+# LiveAPI::Search.web("seo", :count => 25) #=> Returns 25 results instead of our default 50
+
+See LiveAPI::Search::Request for query options.
+
+For more information on the API, visit: http://dev.live.com/livesearch/
