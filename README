@@ -1,3 +1,4 @@
+# LiveAPI.application_id = "YOU_APPLICATION_ID"
 # search = LiveAPI::Search.web("seo")
 # results = search.results #=> 50 happy results :)
 # 
