@@ -22,7 +22,7 @@ module LiveAPI
         @options[:Offset] = @options[:Offset] ||= DEFAULT_OFFSET
         @options[:Market] = @options[:Market] ||= DEFAULT_MARKET
         
-        raise "Application ID is needed" if @options[:AppId].nil?
+        raise "Application ID is needed" if @options[:AppId].empty?
         raise "A query is needed" unless @options.has_key?(:Query)
       end
     
