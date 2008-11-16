@@ -1,7 +1,7 @@
 module LiveAPI
   module Search
     class Request
-      API_DOMAIN = "http://api.search.live.net/"
+      API_DOMAIN = "http://api.search.live.net"
       FORMAT = "json"
       SOURCE = "web"
       DEFAULT_OFFSET = 0

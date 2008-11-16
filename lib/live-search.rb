@@ -9,8 +9,14 @@ module LiveAPI
   module Search
     class << self
       def web(query, options = {})
-        options[:Query] = query unless query.nil?
+        options[:Query] = clean_query(query) unless query.nil?
         Request.new(options)
+      end
+      
+      private
+      
+      def clean_query(query)
+        query.gsub!(" ", "+")
       end
     end
   end
