@@ -1,5 +1,5 @@
 # search = LiveAPI::Search.web("seo")
-# results = search.results #=> 50 results happy results :)
+# results = search.results #=> 50 happy results :)
 # 
 # results.each do |result|
 # 	puts result.title
