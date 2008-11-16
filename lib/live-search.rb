@@ -16,7 +16,7 @@ module LiveAPI
       private
       
       def clean_query(query)
-        query.gsub!(" ", "+")
+        query.gsub(" ", "+")
       end
     end
   end

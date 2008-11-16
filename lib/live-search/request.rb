@@ -16,7 +16,6 @@ module LiveAPI
       def initialize(options)
         @options = options
         @options[:AppId] = LiveAPI.application_id
-        @options[:Format] = FORMAT
         @options[:Sources] = SOURCE
         @options[:Count] = @options[:Count] ||= DEFAULT_COUNT
         @options[:Offset] = @options[:Offset] ||= DEFAULT_OFFSET
@@ -32,7 +31,7 @@ module LiveAPI
         @options["Web.Offset"] = @options[:Offset]
         @options.delete(:Count)
         @options.delete(:Offset)
-        "#{API_DOMAIN}/#{@options[:Format]}.aspx?#{query_string}"
+        "#{API_DOMAIN}/#{FORMAT}.aspx?#{query_string}"
       end
       
       # The response object of the request
