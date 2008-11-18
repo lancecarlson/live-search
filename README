@@ -8,6 +8,8 @@
 # 	puts result.url
 # 	puts result.display_url
 # end
+# 
+# search.total #=> Total number of results returned
 
 You can also provide options in the second parameter. Example:
 

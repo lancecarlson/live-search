@@ -49,6 +49,11 @@ module LiveAPI
         response.results
       end
       
+      # The total number of results from the request
+      def total
+        response.total
+      end
+      
       def query_string  
         self.class.hash_to_query(@options)
       end
